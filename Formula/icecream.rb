@@ -1,6 +1,7 @@
 class Icecream < Formula
   desc "Distributed compiler with a central scheduler to share build load"
   homepage "https://en.opensuse.org/Icecream"
+  head "https://github.com/icecc/icecream.git"
 
   stable do
     url "https://github.com/icecc/icecream/archive/1.0.1.tar.gz"
@@ -43,6 +44,7 @@ class Icecream < Formula
   option "without-clang-wrappers", "Don't use symlink wrappers for clang/clang++"
   option "with-clang-rewrite-includes", "Use by default Clang's -frewrite-includes option"
 
+  depends_on "lzo" # HEAD needs it.
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
