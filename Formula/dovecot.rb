@@ -29,6 +29,10 @@ class Dovecot < Formula
       :revision => "3b1f4c2ac4b924bb429f929d9decd3f50662a6e0"
   end
 
+  patch do
+    url "https://github.com/dovecot/core/commit/0f801c1bd3d684c219d7f3b1e75f8b85f66f7951.diff"
+  end
+  
   def install
     args = %W[
       --prefix=#{prefix}
