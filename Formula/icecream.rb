@@ -32,10 +32,15 @@ class Icecream < Formula
   end
 
   devel do
-    url "https://github.com/icecc/icecream/archive/1.1rc1.tar.gz"
-    version "1.1rc1"
-    sha256 "95bdb66228cc8f5d97a829f1ee4e3f2d32caf064e9614919e8af0f708a13c654"
+    url "https://github.com/icecc/icecream/archive/1.1rc2.tar.gz"
+    version "1.1rc2"
+    sha256 "479d4dd3bc752b3ac5289c9bcfe0270ef3522a325c0945ddb273ded767688958"
 
+    depends_on "lzo"
+  end
+  
+  head do
+    url "https://github.com/icecc/icecream.git", :branch => "master"
     depends_on "lzo"
   end
 
